@@ -82,7 +82,7 @@ services:
       - ragflow
     restart: on-failure
 
-  redis:
+  ragflowplus_redis:
     # swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/valkey/valkey:8
     image: valkey/valkey:8
     container_name: ragflow-redis
