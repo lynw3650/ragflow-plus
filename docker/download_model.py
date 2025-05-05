@@ -10,10 +10,10 @@ models_to_download = [
         "repo_id": "BAAI/bge-m3",  # Embedding 模型
         "local_dir": os.path.expanduser("./models/bge-m3"),
     },
-    {
-        "repo_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",  # LLM 模型
-        "local_dir": os.path.expanduser("./models/DeepSeek-R1-1.5B"),
-    }
+    # {
+    #     "repo_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",  # LLM 模型
+    #     "local_dir": os.path.expanduser("./models/DeepSeek-R1-1.5B"),
+    # }
 ]
 
 # 3. 遍历下载所有模型

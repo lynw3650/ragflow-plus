@@ -103,27 +103,27 @@ services:
     networks:
       - ragflow
 
-  # vllm 语言模型
-  vllm-deepseek:
-    container_name: vllm-deepseek
-    image: vllm/vllm-openai:latest
-    ipc: host
-    volumes:
-      - ./models/DeepSeek-R1-1.5B:/models
-    command: [
-      "--model", "/models",
-      "--served-model-name", "deepseek-r1",
-      "--dtype", "float16",
-      "--tensor-parallel-size", "1",
-      "--max-model-len", "4096"
-    ]
-    ports:
-      - "38001:8000"
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              capabilities: [gpu]
-    networks:
-      - ragflow
+#  # vllm 语言模型
+#  vllm-deepseek:
+#    container_name: vllm-deepseek
+#    image: vllm/vllm-openai:latest
+#    ipc: host
+#    volumes:
+#      - ./models/DeepSeek-R1-1.5B:/models
+#    command: [
+#      "--model", "/models",
+#      "--served-model-name", "deepseek-r1",
+#      "--dtype", "float16",
+#      "--tensor-parallel-size", "1",
+#      "--max-model-len", "4096"
+#    ]
+#    ports:
+#      - "38001:8000"
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              capabilities: [gpu]
+#    networks:
+#      - ragflow
